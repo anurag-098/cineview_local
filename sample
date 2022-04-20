@@ -1,0 +1,25 @@
+async function searchMovies(searchTerm) {
+    if (searchCache[searchTerm]) {
+        console.log('Serving from cache:', searchTerm);
+        return Promise.resolve(searchCache[searchTerm]);
+    }
+    const response = await fetch(`${searchurl}${searchTerm}`);
+    const body = await response.text();
+    const movies = [];
+    const $ = cheerio.load(body);
+    $('.findResult').each(function (i, element) {
+        const $element = $(element);
+        const $image = $element.find('td a img');
+        const $title = $element.find('td.result_text a');
+
+        const imdbId = $title.attr('href').match(/title\/(.*)\//)[1];
+        const movie = {
+            image: $image.attr('src'),
+            title: $title.text(),
+            imdbId
+        };
+        movies.push(movie);
+    });
+    searchCache[searchTerm] = movies;
+    return movies;
+}

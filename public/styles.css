@@ -1,0 +1,131 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+	color: white;
+	background-color: black;
+}
+/* Navbar */
+ a{
+	 text-decoration: none;
+ }
+nav{
+	font-family: 'Merienda', cursive;
+}
+#blogo{
+	font-size: 2rem;
+	color: rgb(255, 214, 153);
+	font-family: 'Merienda', cursive;
+	text-decoration: none;
+}
+
+#ullinks{
+	display: flex;
+	justify-content: space-evenly;
+	width: 30rem;
+}
+#crhead{
+border-bottom: 1px solid grey;
+padding-bottom:1rem;
+}
+
+#featured{
+	display: flex;
+	justify-content: space-evenly;
+	align-content:space-around;
+	flex-wrap: wrap;
+}
+#bcard{
+	display:flex;
+	flex-wrap: wrap;
+	margin-bottom: 1rem;
+}
+
+#bcard ul li{
+	color: white;
+}
+#bcard a{
+	text-decoration: none;
+	color:white;
+}
+#comingSoon{
+	display: flex;
+	justify-content: space-evenly;
+	align-content:space-around;
+	flex-wrap: wrap;
+}
+
+#footer {
+	bottom: 0;
+	width: 100%;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;         
+  }
+  #listitems{
+	margin-top: .2rem;
+	color: rgba(240, 248, 255, 0.562);
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 20rem;
+	
+}
+#copyright{
+	padding-top: 1.5rem;
+	color:rgba(240, 248, 255, 0.562) ;
+}
+
+@media(min-width:300px) and (max-width:395px){
+	#listitems{
+		width:15rem;
+	}
+}
+
